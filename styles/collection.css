@@ -1,4 +1,4 @@
- body.collection {
+body.collection {
      background-image: url(../assets/images/blurred_backgrounds/blur_bg_2.jpg);
      background-repeat: no-repeat;
      background-attachment: fixed;
@@ -38,3 +38,7 @@
  .collection-album-container img {
      width: 80%;
  }
+
+
+
+
