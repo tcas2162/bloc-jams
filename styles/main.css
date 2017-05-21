@@ -1,4 +1,8 @@
- html {
+html, body {
+margin: 0;
+}
+
+html {
      height: 100%; 
      font-size: 100%;
  }
