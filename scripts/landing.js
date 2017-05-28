@@ -27,4 +27,10 @@
      revealSecondPoint();
      revealThirdPoint();
  
+<<<<<<< HEAD
  };
+=======
+ };
+
+ 
+>>>>>>> Checkpoint-21
