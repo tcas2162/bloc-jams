@@ -71,10 +71,8 @@
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
-<<<<<<< HEAD
-=======
 
-    songListContainer.addEventListener('mouseover', function(event) {
+ songListContainer.addEventListener('mouseover', function(event) {
          // #1
                // Only target individual song rows during event delegation
          if (event.target.parentElement.className === 'album-view-song-item') {
