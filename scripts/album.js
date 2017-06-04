@@ -63,27 +63,26 @@
      }
  };
 
- var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
- var songRows = document.getElementsByClassName('album-view-song-item');
+     var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+     var songRows = document.getElementsByClassName('album-view-song-item');
 
- var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
- 
- window.onload = function() {
-     setCurrentAlbum(albumPicasso);
- };
+
+    // Album button templates
+     var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+window.onload = function() {
+    setCurrentAlbum(albumPicasso);
 
     songListContainer.addEventListener('mouseover', function(event) {
-         // #1
-               // Only target individual song rows during event delegation
-         if (event.target.parentElement.className === 'album-view-song-item') {
-              event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
-         }
-     });
+        if (event.target.parentElement.className === 'album-view-song-item') {
+            event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+        } 
+    });
 
-     for (var i = 0; i < songRows.length; i++) {
-         songRows[i].addEventListener('mouseleave', function(event) {
-             // Selects first child element, which is the song-item-number element
-             this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
-         });
-     }
+    for (var i = 0; i < songRows.length; i++) {
+        songRows[i].addEventListener('mouseleave', function(event) {
+           this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
+        });
+    }
+  }
 
+     
