@@ -72,7 +72,7 @@
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
 
-<<<<<<< HEAD
+
  songListContainer.addEventListener('mouseover', function(event) {
          // #1
                // Only target individual song rows during event delegation
@@ -80,23 +80,16 @@ window.onload = function() {
               event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
          }
      });
-=======
+
     songListContainer.addEventListener('mouseover', function(event) {
         if (event.target.parentElement.className === 'album-view-song-item') {
             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
         } 
     });
->>>>>>> checkpoint-25
-
-    for (var i = 0; i < songRows.length; i++) {
+ for (var i = 0; i < songRows.length; i++) {
         songRows[i].addEventListener('mouseleave', function(event) {
            this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
         });
     }
   }
 
-<<<<<<< HEAD
->>>>>>> checkpoint-25
-=======
-     
->>>>>>> checkpoint-25
