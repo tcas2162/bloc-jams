@@ -147,3 +147,4 @@
              clickHandler(event.target);
          });
   }
+}
