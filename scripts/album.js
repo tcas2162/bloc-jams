@@ -64,16 +64,18 @@
  };
 
   var findParentByClassName = function(element, targetClass) {
-    if (element) {
+      if (element) {
         var currentParent = element.parentElement;
-        while (currentParent.className !== targetClass && currentParent.className !== null) {
-            currentParent = currentParent.parentElement;
-        }
-        return currentParent;
-    }
- };
+        while (currentParent !== null) {
+        if (currentParent.className == targetClass) // if matches
+        return currentParent; // return current node
+        currentParent = currentParent.parentElement; // find parent
+}
+    console.log("not found"); // if not found
+}
+};
 
-  var getSongItem = function(element) {
+ var getSongItem = function(element) {
     switch (element.className) {
         case 'album-song-button':
         case 'ion-play':
